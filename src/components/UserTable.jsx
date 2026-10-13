@@ -38,7 +38,7 @@ const UserTable = ({
   const getRoleBadgeStyle = (role) => {
     const r = role?.toLowerCase();
     if (r === 'admin') return { backgroundColor: 'rgba(139,92,246,0.15)', color: '#a78bfa' };
-    if (r === 'moderator') return { backgroundColor: 'rgba(251,191,36,0.15)', color: '#fbbf24' };
+    if (r === 'moderator') return { backgroundColor: 'rgba(14,165,233,0.15)', color: '#38bdf8' };
     return { backgroundColor: 'rgba(148,163,184,0.15)', color: '#94a3b8' };
   };
 
@@ -282,7 +282,7 @@ const UserTable = ({
                               onClick={() => { if (onEditUser) onEditUser(user); }}
                               title="Edit user"
                               id={`edit-user-${user.id}`}
-                              style={{ color: 'var(--accent-warning)' }}
+                              style={{ color: 'var(--accent-primary)' }}
                             >
                               <Pencil size={16} />
                             </button>
@@ -423,7 +423,7 @@ const UserTable = ({
               <button
                 className="btn btn-outline"
                 onClick={() => { setSelectedUser(null); if (onEditUser) onEditUser(selectedUser); }}
-                style={{ color: 'var(--accent-warning)', borderColor: 'rgba(245,158,11,0.3)' }}
+                style={{ color: 'var(--accent-primary)', borderColor: 'rgba(99,102,241,0.3)' }}
               >
                 <Pencil size={15} /> Edit
               </button>

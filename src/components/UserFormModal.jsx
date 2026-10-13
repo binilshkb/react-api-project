@@ -268,12 +268,10 @@ const UserFormModal = ({ isOpen, onClose, onSave, editUser = null }) => {
               <div style={{
                 display: avatarSrc ? 'none' : 'flex',
                 width: 48, height: 48, borderRadius: '50%',
-                background: isEditMode
-                  ? 'linear-gradient(135deg, #f59e0b, #ef4444)'
-                  : 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+                background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
                 alignItems: 'center', justifyContent: 'center',
                 fontSize: '1.25rem', fontWeight: 700, color: 'white',
-                boxShadow: `0 0 0 3px ${isEditMode ? 'rgba(245,158,11,0.25)' : 'rgba(99,102,241,0.25)'}`,
+                boxShadow: '0 0 0 3px rgba(99,102,241,0.25)',
               }}>
                 {avatarLetter}
               </div>
@@ -282,7 +280,7 @@ const UserFormModal = ({ isOpen, onClose, onSave, editUser = null }) => {
                 <div style={{
                   position: 'absolute', bottom: -2, right: -2,
                   width: 18, height: 18, borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #f59e0b, #ef4444)',
+                  background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   border: '2px solid var(--bg-primary)',
                 }}>
@@ -330,7 +328,7 @@ const UserFormModal = ({ isOpen, onClose, onSave, editUser = null }) => {
 
             {/* ─ Personal Info ─ */}
             <div>
-              <p style={sectionLabel(isEditMode ? '#f59e0b' : 'var(--accent-primary)')}>Personal Information</p>
+              <p style={sectionLabel('var(--accent-primary)')}>Personal Information</p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
                 {field('firstName', 'First Name *', 'text', 'Jane')}
                 {field('lastName', 'Last Name *', 'text', 'Doe')}
@@ -356,7 +354,7 @@ const UserFormModal = ({ isOpen, onClose, onSave, editUser = null }) => {
 
             {/* ─ Role & Work ─ */}
             <div>
-              <p style={sectionLabel(isEditMode ? '#f59e0b' : 'var(--accent-primary)')}>Role &amp; Work</p>
+              <p style={sectionLabel('var(--accent-primary)')}>Role &amp; Work</p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
                 {selectField('role', 'Role', [
                   { value: 'user', label: 'User' },
@@ -373,7 +371,7 @@ const UserFormModal = ({ isOpen, onClose, onSave, editUser = null }) => {
 
             {/* ─ Location & Education ─ */}
             <div>
-              <p style={sectionLabel(isEditMode ? '#f59e0b' : 'var(--accent-primary)')}>Location &amp; Education</p>
+              <p style={sectionLabel('var(--accent-primary)')}>Location &amp; Education</p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
                 {field('city', 'City', 'text', 'New York')}
                 {field('country', 'Country', 'text', 'United States')}
@@ -396,7 +394,7 @@ const UserFormModal = ({ isOpen, onClose, onSave, editUser = null }) => {
               style={{
                 minWidth: 140,
                 background: isEditMode
-                  ? 'linear-gradient(135deg, #f59e0b, #ef4444)'
+                  ? 'linear-gradient(135deg, #6366f1, #4f46e5)'
                   : undefined,
               }}
             >

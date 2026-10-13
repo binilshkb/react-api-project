@@ -9,7 +9,7 @@ import {
 } from 'recharts';
 import { PieChart as PieChartIcon } from 'lucide-react';
 
-const COLORS = ['var(--accent-primary)', 'var(--accent-info)', 'var(--accent-warning)'];
+const COLORS = ['var(--accent-primary)', 'var(--accent-info)', 'var(--accent-success)'];
 
 const RoleDistributionChart = ({ data }) => {
   return (
